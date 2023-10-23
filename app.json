@@ -1,8 +1,8 @@
 {
   "name": "TOGE-MD",
-  "description": "A Whatsapp md bot built in NodeJs to make experience better",
+  "description": "un bot WhatsApp pour vos conversations et faciliter la gestion de groupe.",
   "logo": "https://i.imgur.com/VE6uRhQ.jpg",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "SecktorBot", "Secktor","SecktorMD","theme bot","multi device","baileys","TOGE INUMAKK"],
+  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "SecktorBot", "TOGE-MD","SecktorMD","theme bot","multi device","baileys","TOGE INUMAKI"],
   "success_url": "/",
   "stack": "container",
 "env": {
@@ -15,7 +15,7 @@
      "required" :false
     },
     "AUTO_STATUS_SAVER": {
-      "description": "TÉLÉCHARGER AUTOMATIQUEMENT LES STATUTS WHATSAPP VEUILLEZ ENTRER LE(S) NUMÉRO DE LE PAERSONNE.",
+      "description": "TÉLÉCHARGER AUTOMATIQUEMENT LES STATUTS WHATSAPP VEUILLEZ ENTRER LE(S) NUMÉRO DE LE PERSONNE.",
        "required" :false
       },
     "HEROKU_API_KEY": {
@@ -79,7 +79,7 @@
     "value": "mongodb+srv://sam:sam@cluster0.u1smxsv.mongodb.net/?retryWrites=true&w=majority"
   },
     "THEME": {
-    "description": "Put the theme name you want to use. Avilable themes are SECKTOR,ZEROTWO,NEZUKO,LUFFY,GOKU and many more..",
+    "description": "Put the theme name you want to use. Avilable themes are TOGE-MD,ZEROTWO,NEZUKO,LUFFY,GOKU and many more..",
      "value": "TOGE-MD"
   },
     "WORKTYPE": {
