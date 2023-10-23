@@ -1,42 +1,58 @@
-const fs = require('fs-extra');
-const { Sequelize } = require('sequelize');
-if (fs.existsSync('set.env'))
-    require('dotenv').config({ path: __dirname + '/set.env' });
-const path = require("path");
-const databasePath = path.join(__dirname, './database.db');
-const DATABASE_URL = process.env.DATABASE_URL === undefined
-    ? databasePath
-    : process.env.DATABASE_URL;
-module.exports = { session: process.env.SESSION_ID || 'zokk',
-    PREFIXE: process.env.PREFIXE,
-    NOM_OWNER: process.env.NOM_OWNER || "TOGE-MD",
-    LECTURE_AUTO_STATUS: process.env.LECTURE_AUTO_STATUS,
-    TELECHARGER_AUTO_STATUS: process.env.TELECHARGER_AUTO_STATUS || 'non',
-    MODE: process.env.MODE_PUBLIC,
-    DATABASE_URL,
-    DATABASE: DATABASE_URL === databasePath
-        ? "postgres://db_7xp9_user:6hwmTN7rGPNsjlBEHyX49CXwrG7cDeYi@dpg-cj7ldu5jeehc73b2p7g0-a.oregon-postgres.render.com/db_7xp9" : "postgres://db_7xp9_user:6hwmTN7rGPNsjlBEHyX49CXwrG7cDeYi@dpg-cj7ldu5jeehc73b2p7g0-a.oregon-postgres.render.com/db_7xp9",
-    /* new Sequelize({
-     dialect: 'sqlite',
-     storage: DATABASE_URL,
-     logging: false,
-})
-: new Sequelize(DATABASE_URL, {
-     dialect: 'postgres',
-     ssl: true,
-     protocol: 'postgres',
-     dialectOptions: {
-         native: true,
-         ssl: { require: true, rejectUnauthorized: false },
-     },
-     logging: false,
-}),*/
+const fs = require('fs-extra')
+if (fs.existsSync('config.env')) require('dotenv').config({ path: __dirname+'/config.env' })
+
+
+//═══════[Required Variables]════════\\
+global.owner = process.env.OWNER_NUMBER.split(",")
+global.mongodb = process.env.MONGODB_URI || "mongodb+srv://sam:sam@cluster0.u1smxsv.mongodb.net/?retryWrites=true&w=majority"
+global.port= process.env.PORT || 5000
+global.email = 'tresorngalamou@gmail.com'
+global.github = 'https://github.com/warren12345679/TOGE-MD-'
+global.location = 'Sultanpur IN'
+global.gurl = 'https://instagram.com/' // add your username
+global.sudo = process.env.SUDO || '17245423663'
+global.devs = '17245423663';
+global.website = 'https://github.com/warren12345679/TOGE-MD-' //wa.me/+1000000000000
+global.THUMB_IMAGE = process.env.THUMB_IMAGE || 'https://i.imgur.com/VE6uRhQ.jpg'
+module.exports = {
+  botname:   process.env.BOT_NAME === undefined ? 'TOGE-MD' : process.env.BOT_NAME,
+  ownername: process.env.OWNER_NAME === undefined ? 'TOGE INUMAKI' : process.env.OWNER_NAME,
+  sessionName:  process.env.SESSION_ID === undefined ? false : process.env.SESSION_ID,
+  author:  process.env.PACK_INFO.split(";")[0] === undefined ? 'SamPandey001' : process.env.PACK_INFO.split(";")[0],
+  auto_read_status :  process.env.AUTO_READ_STATUS === undefined ? false : process.env.AUTO_READ_STATUS,
+  packname:  process.env.PACK_INFO.split(";")[1] === undefined ? 'Secktor-Md' : process.env.PACK_INFO.split(";")[1],
+  autoreaction:  process.env.AUTO_REACTION  === undefined ? false : process.env.AUTO_REACTION ,
+  antibadword :  process.env.ANTI_BAD_WORD === undefined ? 'nbwoed' : process.env.ANTI_BAD_WORD,
+  alwaysonline:  process.env.ALWAYS_ONLINE === undefined ? false : process.env.ALWAYS_ONLINE,
+  antifake : process.env.FAKE_COUNTRY_CODE === undefined ? '971' : process.env.FAKE_COUNTRY_CODE,
+  readmessage:  process.env.READ_MESSAGE === undefined ? false : process.env.READ_MESSAGE,
+  auto_status_saver: process.env.AUTO_STATUS_SAVER === undefined ? false : process.env.AUTO_STATUS_SAVER,
+  HANDLERS:  process.env.PREFIX === undefined ? ['.'] : process.env.PREFIX,
+  warncount : process.env.WARN_COUNT === undefined ? 3 : process.env.WARN_COUNT,
+  disablepm:  process.env.DISABLE_PM === undefined ? false : process.env.DISABLE_PM,
+  levelupmessage:  process.env.LEVEL_UP_MESSAGE === undefined ? false : process.env.LEVEL_UP_MESSAGE,
+  antilink:  process.env.ANTILINK_VALUES === undefined ? 'chat.whatsapp.com' : process.env.ANTILINK_VALUES,
+  antilinkaction: process.env.ANTILINK_ACTION === undefined ? 'remove' : process.env.ANTILINK_ACTION,
+  BRANCH: 'main', 
+  ALIVE_MESSAGE:  process.env.ALIVE_MESSAGE === undefined ? '' : process.env.ALIVE_MESSAGE,
+  autobio:  process.env.AUTO_BIO === undefined ? false : process.env.AUTO_BIO,
+  OPENAI_API_KEY:  process.env.OPENAI_API_KEY === undefined ? false : process.env.OPENAI_API_KEY,
+  heroku:  process.env.heroku === undefined ? false : process.env.heroku,
+  HEROKU: {
+    HEROKU: process.env.HEROKU ||false,
+    API_KEY: process.env.HEROKU_API_KEY === undefined ? '1abfce1e-1bee-4334-9f6c-f4c1cb1cafab' : process.env.HEROKU_API_KEY,
+    APP_NAME: process.env.HEROKU_APP_NAME === undefined ? 'zeropgg' : process.env.HEROKU_APP_NAME
+},
+  VERSION: process.env.VERSION === undefined ? 'v.0.0.3' : process.env.VERSION,
+  LANG: process.env.THEME|| 'SECKTOR',
+  WORKTYPE: process.env.WORKTYPE === undefined ? 'public' : process.env.WORKTYPE
 };
-let fichier = require.resolve(__filename);
-fs.watchFile(fichier, () => {
-    fs.unwatchFile(fichier);
-    console.log(`mise à jour ${__filename}`);
-    delete require.cache[fichier];
-    require(fichier);
-});
-	
+
+
+let file = require.resolve(__filename)
+fs.watchFile(file, () => {
+	fs.unwatchFile(file)
+	console.log(`Update'${__filename}'`)
+    delete require.cache[file]
+	require(file)
+})
