@@ -1,29 +1,29 @@
 {
   "name": "TOGE-MD",
   "description": "A Whatsapp md bot built in NodeJs to make experience better",
-  "logo": "https://camo.githubusercontent.com/14279dac3151a95fca8ec5bebda435d68d62c49f6aa4f30749f541ee985ad21b/68747470733a2f2f7365636b746f7275736572626f742e6f6e72656e6465722e636f6d2f6d61696e2e6a7067",
-  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "SecktorBot", "Secktor","SecktorMD","theme bot","multi device","baileys","Sam Pandey"],
+  "logo": "https://i.imgur.com/VE6uRhQ.jpg",
+  "keywords": ["nodejs", "bot", "whatsapp bot", "Zero-Two", "SecktorBot", "Secktor","SecktorMD","theme bot","multi device","baileys","TOGE INUMAKK"],
   "success_url": "/",
   "stack": "container",
 "env": {
   "OWNER_NAME": {
-  "description": "Name of Bot Owner",
+  "description": "NOM DU OWNER",
       "value": "TOGE INUMAKI"
   },
   "ALIVE_MESSAGE": {
-    "description": "Alive message for bot",
+    "description": "ALIVE MESSAGE BOT",
      "required" :false
     },
     "AUTO_STATUS_SAVER": {
-      "description": "Automatically saves status of every person and sends in log number.",
+      "description": "TÉLÉCHARGER AUTOMATIQUEMENT LES STATUTS WHATSAPP VEUILLEZ ENTRER LE(S) NUMÉRO DE LE PAERSONNE.",
        "required" :false
       },
     "HEROKU_API_KEY": {
-    "description": "Put HEROKU API KEY",
+    "description": "HEROKU API KEY",
      "required" :false
     },
   "HEROKU_APP_NAME": {
-    "description": "Put HEROKU APP NAME same as above.",
+    "description": "HEROKU APP NAME same as above.",
      "required" :false
     },
    "THUMB_IMAGE": {
@@ -35,12 +35,12 @@
      "required" :false
     },
    "ANTILINK_VALUES": {
-    "description": "Put words for antilink",
+    "description": "antilien",
      "value": "chat.whatsapp.com,fb.com,instagram.com",
      "required" :false
     },
      "ANTILINK_ACTION": {
-    "description": "Put action for antilink",
+    "description": "action d'antilien",
      "value": "remove",
      "required" :false
     },
@@ -63,11 +63,11 @@
       "value": "."
   },
   "OWNER_NUMBER": {
-    "description": "The phone numbers of the users who you want to be admin for the bot (should be in international format without + and multiple numbers must be separated by a comma \",\")",
+    "description": "numero du propriétaire (vous pouvez mettre plusieurs) sans + ex:",
        "value": "17245423663"
   },
    "SESSION_ID": {
-    "description": "Please put your SESSION_ID here,if you don't have visit https://secktorbot.herokuapp.com/session "
+    "description": "SESSION DU BOT "
   },
     "OPENAI_API_KEY": {
     "description": "Please put your OPENAI api key here.Get it from beta.openai.com ",
@@ -80,7 +80,7 @@
   },
     "THEME": {
     "description": "Put the theme name you want to use. Avilable themes are SECKTOR,ZEROTWO,NEZUKO,LUFFY,GOKU and many more..",
-     "value": "LUFFY"
+     "value": "TOGE-MD"
   },
     "WORKTYPE": {
   "description": "Worktype of your bot. Use public or private, if it is private then only bot number can use it. If public then everyone can use it.",
